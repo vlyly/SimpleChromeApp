@@ -1,0 +1,8 @@
+body{
+    background-color : pink;
+}
+
+h1{
+    color : rgb(255, 255, 255);
+    transition : color 0.5s ease-in-out;
+}
