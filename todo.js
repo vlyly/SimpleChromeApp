@@ -34,12 +34,13 @@ function paintTodo(text){
     
     todos.push(todoObj); //생성된 todoObj를 todos 배열의 맨 마지막 요소로 추가합니다
     saveTodos(); // 생성된 배열을 local storage에 저장합니다 반드시 push한 이후에 저장해주세요
-    deleteBtn.innerText = "❌";
-    deleteBtn.addEventListener("click", deleteTodo);
     span.innerText = ` ${text}`; // <span>을 생성하여 태그 안에 text를 입력합니다
+    span.classList.add("spanRec");
+    deleteBtn.innerText = "×";
+    deleteBtn.addEventListener("click", deleteTodo);
     li.id = newID; // 생성된 li 요소의 id를 todos.lenght + 1 로 설정합니다
-    li.appendChild(deleteBtn); // delet버튼을 li의 자식 요소로 이동시킵니다
     li.appendChild(span); // span을 li의 자식 요소로 이동시킵니다
+    li.appendChild(deleteBtn); // delet버튼을 li의 자식 요소로 이동시킵니다
     todoList.appendChild(li); //todoList의 자식 요소로 li를 이동시킵니다
 
 }
