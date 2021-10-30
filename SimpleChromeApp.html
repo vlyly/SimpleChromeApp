@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Hello</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="SimpleChromeApp.css" />
+  </head>
 
-<head>
-	<title>Hello</title>
-	<meta charset="utf-8" />
-	<link rel='stylesheet' href='SimpleChromeApp.css' />
-</head>
-
-<body>
-	<div class="js_weather weather"></div>
-	<div class=container>
-		<div class="js_clock clock">
-			00:00
-		</div>
-
-		<div class="js_greetings greetings"></div>
-
-		<form class="js_form form">
-			<input class="nameInput" type="text" placeholder="What is your name?">
-			<hr class="nameLine">
-		</form>
-
-		<form class="js_todo">
-			<input class="todoInput" type="text" placeholder="Write a to do">
-			<div class="inputRec"></div>
-		</form>
-
-		<ul class="js_todoList todoList">
-		</ul>
-	</div>
-	<script src="clock.js"></script>
-	<script src="greetings.js"></script>
-	<script src="todo.js"></script>
-	<script src="background.js"></script>
-	<script src="weather.js"></script>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="js_weather weather"></div>
+      <div class="js_clock clock">00:00</div>
+      <h3 class="js_greetings greetings"></h3>
+      <form class="js_form form">
+        <input class="nameInput" type="text" placeholder="What is your name?" spellcheck="false"/>
+      </form>
+      <form class="js_todo todo">
+        <input class="todoInput" type="text" placeholder="Write a to do" maxlength="25" spellcheck="false" />
+      </form>
+      <ul class="js_todoList todoList"></ul>
+    </div>
+    <script src="clock.js"></script>
+    <script src="greetings.js"></script>
+    <script src="todo.js"></script>
+    <script src="background.js"></script>
+    <script src="weather.js"></script>
+  </body>
 </html>

@@ -1,139 +1,163 @@
 @import "reset.css";
-@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap");
 
-body{
-    background-color : #dcdde1;
-    color : rgb(255, 255, 255);
-    transition : color 0.5s ease-in-out;
-    font-family : 'Old Standard TT', serif;
+html {
+  font-family: "Noto Serif KR", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
 }
 
-.weather{
-    position : absolute;
-    left : 90%;
-    top : 20px;
-    right : 10px;
+body {
+  height: 100vh;
+  color: rgb(255, 255, 255);
+  font-family: "Noto Serif KR", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+  background-color: #dcdde1;
+  transition: color 0.5s ease-in-out;
 }
 
-.container{
-    text-align : center;
-    position : absolute;
-    width : 100%;
-    top : 50%;
-    margin-top : -125px;
+input,
+button :focus {
+  outline: none;
 }
 
-.clock{
-    font-size : 150px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
 }
 
-.greetings{
-    font-size : 30px;
+.weather {
+  position: absolute;
+  left: 87%;
+  top: 50px;
 }
 
-.nameInput{
-    background-color : transparent;
-    border : none;
-    font-size : 30px;
-    text-align: center;
-    color: white;
-    font-family: inherit;
+.clock {
+  margin-bottom: 50px;
+  font-size: 150px;
 }
 
-.nameInput::placeholder{
-    color: white;
-    opacity : 70%;
+.nameInput {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  font-family: inherit;
 }
 
-.nameLine{
-    width: 450px;
-    background-color : white;
-    height: .5px;
-    border: none;
-    place-content: white;
+.nameInput,
+.todoInput::placeholder {
+  color: white;
+  opacity: 80%;
 }
 
-.form :focus{
-    outline: none;
+.greetings {
+  font-size: 30px;
+  transition: color 0.5s ease-in-out;
+  animation: fadeIn 0.5s linear;
 }
 
-.inputRec{
-    position : relative;
-    left : 50%;
-    margin-top : 20px;
-    margin-left: -100px;
-    width : 200px;
-    height : 23px;
-    background-color : white;
-    opacity : 50%;
-    z-index : -1;
+.time {
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.todoInput{
-    width : 180px;
-    left : 50%;
-    margin-left : -90px;
-    margin-top : 3px;
-    position : absolute;
-    background-color : transparent;
-    border : none;
-    font-family: inherit;
+.todoInput {
+  display: inline-block;
+  width: 400px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 18px;
+  font-family: inherit;
+  text-indent: 1em;
 }
 
-.todoInput:focus {
-    outline : none;
+.todoList {
+  height: 200px;
+  margin-top: 30px;
+  color: #3a3a3a;
+  scrollbar-gutter: stable both-edges;
 }
 
-.spanRec{
-    width : 200px;
-    height: 25px;
-    display : inline-block;
+.todoList::-webkit-scrollbar {
+  width: 10px;
+}
+.todoList::-webkit-scrollbar-thumb {
+  background-color: rgb(241, 241, 243);
+  border-radius: 10px;
+}
+.todoList::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
 }
 
-.todoList li{
-    transition : color 0.5s ease-in-out;
-    animation : fadeIn .5s linear;
+.todoList li :not(:last-child) {
+  width: 400px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: color 0.5s ease-in-out;
+  animation: fadeIn 0.5s linear;
 }
 
-.todoList button{
-    background-color: transparent;
-    border: none;
-    font-size : 20px;
-    font-weight: 300;
-    color : white;
-    cursor : pointer;
-    display: inline-block;
+.todoList button {
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
 }
 
-.todoList button:focus {
-    outline : none;
+.spanRec {
+  display: inline-block;
+}
+
+.greetings {
+  margin-bottom: 30px;
 }
 
 .form,
-.greetings{
-    display : none;
+.greetings {
+  display: none;
 }
 
-.showing{
-    display : block;
+.showing {
+  display: block;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: fadeIn 0.5s linear;
 }
 
 @keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to{
-        opacity: 1;
-    }
-}
-
-.bgImage{
-    position : absolute;
-    top : 0;
-    left : 0;
-    width : 100%;
-    height: 100%;
-    z-index : -2;
-    animation : fadeIn .5s linear;
+  to {
+    opacity: 1;
+  }
 }
