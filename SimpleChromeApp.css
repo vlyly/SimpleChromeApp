@@ -54,7 +54,7 @@ button :focus {
   font-family: inherit;
 }
 
-.nameInput,
+.nameInput::placeholder,
 .todoInput::placeholder {
   color: white;
   opacity: 80%;
