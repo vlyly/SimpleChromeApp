@@ -43,10 +43,11 @@ function paintTodo(text) {
 }
 
 function handleSubmit(event) {
-  const currentValue = todoInput.value;
+  let currentValue = todoInput.value;
   event.preventDefault();
 
-  if ((currentValue = "")) {
+  if (currentValue === "") {
+    alert("내용을 입력해주세요.");
     return false;
   }
 
