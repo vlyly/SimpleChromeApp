@@ -19,7 +19,7 @@ l. 목표<br>
 <h3>미리보기</h3>
 <div align="center">
 
-!![FireShot Capture 006 - Hello - ](https://user-images.githubusercontent.com/69294741/139649154-c75e759e-4430-44c3-bb32-dd5a44cfefcc.png)
+![FireShot Capture 006 - Hello - ](https://user-images.githubusercontent.com/69294741/139649154-c75e759e-4430-44c3-bb32-dd5a44cfefcc.png)
 
 ![FireShot Capture 007 - Hello - ](https://user-images.githubusercontent.com/69294741/139649763-b28e1f69-b6e4-460d-953c-783535c734c7.png)
 
